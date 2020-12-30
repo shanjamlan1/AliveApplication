@@ -1,5 +1,8 @@
+import 'package:aliveapp/homescreen.dart';
+import 'package:aliveapp/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:aliveapp/forgotpassword.dart';
 
 class LoginScreen extends StatelessWidget{
   @override
@@ -150,7 +153,13 @@ class LoginScreen extends StatelessWidget{
                                 child: Align(
                                   alignment: Alignment.centerRight,
                                   child: FlatButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => ForgotPassword(),
+                                        ));
+                                    },
                                     color: Colors.white,
                                     highlightColor: Colors.transparent,
                                     child: Text(
@@ -180,7 +189,13 @@ class LoginScreen extends StatelessWidget{
                                     borderRadius: BorderRadius.all(Radius.circular(13.0)),
                                   ),
                                   color: Color(0xFFEB404D),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                    )
+                                  );
+                                  },
                                   child: Text(
                                     'Login'.toUpperCase(),
                                     style: TextStyle(
@@ -197,7 +212,13 @@ class LoginScreen extends StatelessWidget{
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: FlatButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => SignUpScreen(),
+                                        ));
+                                    },
                                     color: Colors.white,
                                     highlightColor: Colors.transparent,
                                     child: Row(
@@ -224,7 +245,6 @@ class LoginScreen extends StatelessWidget{
                                   ),
                                 ),
                               ),
-
                             ],
                           )
                         ),
